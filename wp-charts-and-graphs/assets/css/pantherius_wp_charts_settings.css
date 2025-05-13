@@ -33,18 +33,11 @@
 
 }
 
-.pwpc-form-row-half {
-    display: inline-block;
-    margin-right: 20px;
-}
+.pwpc-form-row-half { display: inline-block;margin-right: 20px;}
 
-.wrap.pwpc {
-	min-height: 1500px;
-}
+.wrap.pwpc { min-height: 1500px; }
 
-.admin-chart {
-	min-height: 400px;
-}
+.admin-chart { min-height: 400px; }
 
 .pwpc-form-row:not(:first-child) {
 	margin-top: 20px;
@@ -92,11 +85,5 @@ select.pwpc-form-control:focus::-ms-value {
 	font-size: 20px;
     font-family: arial;
 }
-.pwpc-shortcode {
-	margin-bottom: 20px;
-	font-size: 16px;
-	line-height: 1.5;
-}
-.pwpc-area {
-	margin-top: 50px;
-}
+.pwpc-shortcode { margin-bottom: 20px;font-size: 16px;line-height: 1.5;}
+.pwpc-area { margin-top: 50px;}

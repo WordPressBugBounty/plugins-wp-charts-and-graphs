@@ -12,9 +12,7 @@
 				if ( isset( $_REQUEST[ 'settings-updated' ] ) ) {
 			?>
 			<div id="message" class="updated below-h2">
-				<p>
-					<?php esc_html_e( 'Settings saved.', MODAL_SURVEY_TEXT_DOMAIN );?>
-				</p>
+				<p><?php esc_html_e( 'Settings saved.', PWPC_CHARTS_TEXT_DOMAIN );?></p>
 			</div>
 			<?php 
 				}

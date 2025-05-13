@@ -1,9 +1,9 @@
 === WP Charts and Graphs - WordPress Chart Plugin ===
 Contributors: Pantherius
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=6H6YHMQG8JJ5J&lc=USD&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
-Tags: chart, graph, results, data, election, data collection, pie chart, radar chart, bar chart, polar chart, doughnut chart, line chart
+Tags: chart, graph, results, data, pie chart
 Requires at least: 6.0
-Tested up to: 6.4.1
+Tested up to: 6.8
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,7 +12,7 @@ WP Charts and Graphs provides stunning, interactive charts to visualize any numb
 
 == Description ==
 
-[WordPress Survey Plugin](modalsurvey.com)
+[Swift Woo Search - eCommerce Smart Search](https://swiftwoosearch.com/)
 
 WP Charts and Graphs plugin gives you a powerful chart generator on your WordPress admin. It is also allows you to see the chart immediately on the admin before you publish it. It is pretty simple, you specify the titles and the values, choose the chart type, then the plugin automatically generate the shortcode which you can include on any page or post.
 
@@ -26,7 +26,11 @@ The admin area provides a generator with live preview. This way you will exactly
 Currently you can use the Pie Chart, Polar Chart, Doughnut Chart, Radar Chart, Bar Chart and the Line Chart.
  
  = Do you need more? =
- [Modal Survey for WordPress](https://modalsurvey.com) is a Premium WordPress Plugin to get your visitors feedback via a professional, attention-grabber poll. Provides unlimited surveys, questions and answers with embedding option. Various animations and Visual Builder helps you to design your own styled survey that perfectly fits to your website. Display the results simply with __Plain Text__, __Progress Bar__, __Line Bar__, __Pie Chart__, __Bar Chart__, __Doughnut Chart__, __Line Chart__, __Polar Chart__ and __Radar Chart__ formats. The integrated Shortcode Manager ensures you can quickly include the survey's results to any page or post with only few clicks. __Export__ your survey to __PDF__, __XLS__, __CSV__, __JSON__ and __XML__ 
+ [Swift Woo Search](https://swiftwoosearch.com) is a powerful search plugin for WooCommerce that replaces the default search experience with a smarter alternative. It helps your customers find products faster – even if they make typos, use partial words, or search by tags or descriptions. Instead of showing "no results", it offers fallback suggestions and shows up to 15 relevant items using advanced relevance scoring.
+
+It also provides built-in analytics: track search keywords, click-through rates, add-to-cart rates, and purchases – so you always know what your customers are looking for. The plugin supports fuzzy search, position-aware ranking, custom relevance tuning, and is fully responsive for mobile users.
+
+Includes search logging, product-level keyword tracking, and an admin dashboard with visual insights – so you can make better product and marketing decisions.
  
  == Features ==
 
@@ -37,8 +41,6 @@ Currently you can use the Pie Chart, Polar Chart, Doughnut Chart, Radar Chart, B
 
 == Other Projects ==
 
-* [W8 Contact Form - Sliding Form for WordPress](https://1.envato.market/0DDdL)
-* [Simple Signup - Email Subscription Form](https://1.envato.market/R3Q9X)
 * [Board Game Upgrades](https://boardgameset.com)
 
 == Installation ==
@@ -82,6 +84,10 @@ Initial Release
 
 == Changelog ==
 
+
+= 1.2.3 =
+* updated compatibility
+* minor CSS optimization
 
 = 1.2.2 =
 * minor optimization
