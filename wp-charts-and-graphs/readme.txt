@@ -85,6 +85,9 @@ Initial Release
 == Changelog ==
 
 
+= 1.2.4 =
+* fixed broken Settings page
+
 = 1.2.3 =
 * updated compatibility
 * minor CSS optimization

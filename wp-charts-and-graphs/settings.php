@@ -99,6 +99,8 @@ if ( ! class_exists( 'pantherius_wp_charts_settings' ) ) {
 		public function settings_section_wp_sap() {
 		
 		}
+		public function settings_section_pantherius_wp_charts() {
+		}
 	}
 }
 ?>

@@ -5,12 +5,12 @@ defined( 'ABSPATH' ) OR exit;
  * Plugin URI: http://modalsurvey.com
  * Description: Add custom charts to your website
  * Author: Pantherius
- * Version: 1.2.3
+ * Version: 1.2.4
  * Author URI: http://pantherius.com
  */
 
 define( 'PWPC_CHARTS_TEXT_DOMAIN' , 'pwpcharts' );
-define( 'PWPC_CHARTS_VERSION' , '1.2.3' );
+define( 'PWPC_CHARTS_VERSION' , '1.2.4' );
  
 if ( ! class_exists( 'pantherius_wp_charts' ) ) {
 	class pantherius_wp_charts {
@@ -138,12 +138,12 @@ if ( ! class_exists( 'pantherius_wp_charts' ) ) {
 		}
 
 		public static function getInstance() {
-			if ( ! isset( $instance ) ) {
-				$instance = new pantherius_wp_charts;
+			if ( self::$instance === null ) {
+				self::$instance = new self();
 			}
-		return $instance;
-		}
-		
+			return self::$instance;
+		}		
+
 		/**
 		* Activate the plugin
 		**/
