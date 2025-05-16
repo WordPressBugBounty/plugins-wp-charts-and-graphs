@@ -5,12 +5,12 @@ defined( 'ABSPATH' ) OR exit;
  * Plugin URI: http://modalsurvey.com
  * Description: Add custom charts to your website
  * Author: Pantherius
- * Version: 1.2.4
+ * Version: 1.2.5
  * Author URI: http://pantherius.com
  */
 
 define( 'PWPC_CHARTS_TEXT_DOMAIN' , 'pwpcharts' );
-define( 'PWPC_CHARTS_VERSION' , '1.2.4' );
+define( 'PWPC_CHARTS_VERSION' , '1.2.5' );
  
 if ( ! class_exists( 'pantherius_wp_charts' ) ) {
 	class pantherius_wp_charts {
@@ -24,11 +24,11 @@ if ( ! class_exists( 'pantherius_wp_charts' ) ) {
 			register_activation_hook( __FILE__, array( 'pantherius_wp_charts', 'activate' ) );
 			register_deactivation_hook( __FILE__, array( 'pantherius_wp_charts', 'deactivate' ) );
 			register_uninstall_hook( __FILE__, array( 'pantherius_wp_charts', 'uninstall' ) );
-			add_action( 'plugins_loaded', array(&$this, 'pwpc_localization'));
+			add_action( 'plugins_loaded', array($this, 'pwpc_localization'));
 			if ( is_admin() ) {
 				require_once( sprintf( "%s/settings.php", dirname( __FILE__ ) ) );
 				$pantherius_wp_charts_settings = new pantherius_wp_charts_settings();
-				add_filter( "plugin_action_links_" . plugin_basename( __FILE__ ), array( &$this, 'add_action_links' ) );
+				add_filter( "plugin_action_links_" . plugin_basename( __FILE__ ), array( $this, 'add_action_links' ) );
 				$wpcag_ltime = get_option( 'wpcag_ltime' );
 				if ( empty( $wpcag_ltime ) ) {
 					$date = date_create();
@@ -46,9 +46,9 @@ if ( ! class_exists( 'pantherius_wp_charts' ) ) {
 				}
 				if ( $pantherius_wp_charts_load || isset( $_REQUEST[ 'sspcmd' ] ) ) {
 					//integrate the public functions
-					add_shortcode( 'wpcharts', array( &$this, 'pantherius_wpcharts_shortcode' ) );
-					add_action( 'init', array( &$this, 'enqueue_custom_scripts_and_styles' ) );
-					add_action( 'get_footer' , array( &$this, 'initialize_chartjs' ), 175 );						
+					add_shortcode( 'wpcharts', array( $this, 'pantherius_wpcharts_shortcode' ) );
+					add_action( 'init', array( $this, 'enqueue_custom_scripts_and_styles' ) );
+					add_action( 'get_footer' , array( $this, 'initialize_chartjs' ), 175 );						
 				}
 			}
 		}
@@ -127,8 +127,6 @@ if ( ! class_exists( 'pantherius_wp_charts' ) ) {
 				$exlimitpages = explode( ',', $exlimitload );
 			if ( ( count( $exlimitpages ) > 0 && in_array( $thispid, $exlimitpages ) ) || ( count( $exlimitpages ) == 0 ) ) {
 					return;
-				}
-				else {
 				}
 			}
 			wp_enqueue_style( 'pantherius_wp_charts_style', plugins_url( '/assets/css/pantherius_wp_charts.css', __FILE__ ) );

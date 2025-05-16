@@ -85,6 +85,9 @@ Initial Release
 == Changelog ==
 
 
+= 1.2.5 =
+* minor code refactoring
+
 = 1.2.4 =
 * fixed broken Settings page
 
