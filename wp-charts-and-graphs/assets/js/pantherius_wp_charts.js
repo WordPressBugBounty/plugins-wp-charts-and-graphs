@@ -356,7 +356,6 @@ $.extend( Plugin.prototype, {
 						msChartOptions.scales = {
 							yAxes: [{
 								ticks: {
-									max: parseInt( style.max ),
 									stepSize: Math.ceil( style.max / 10 ),
 									beginAtZero: true,
 									min: parseInt( style.min )
@@ -364,6 +363,7 @@ $.extend( Plugin.prototype, {
 							}],
 							xAxes: [{
 								ticks: {
+									max: parseInt( style.max ),
 									autoSkip: false,
 									beginAtZero: true,
 									min: parseInt( style.min )

@@ -5,7 +5,7 @@ defined( 'ABSPATH' ) OR exit;
  * Plugin URI: http://modalsurvey.com
  * Description: Add custom charts to your website
  * Author: Pantherius
- * Version: 1.2.5
+ * Version: 1.2.6
  * Author URI: http://pantherius.com
  */
 

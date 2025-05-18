@@ -85,6 +85,9 @@ Initial Release
 == Changelog ==
 
 
+= 1.2.6 =
+* fixed max parameter doesn't worked with horizontal bar chart
+
 = 1.2.5 =
 * minor code refactoring
 
