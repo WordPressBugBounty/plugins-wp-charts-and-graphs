@@ -1,6 +1,5 @@
 === WP Charts and Graphs - WordPress Chart Plugin ===
 Contributors: Pantherius
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=6H6YHMQG8JJ5J&lc=USD&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: chart, graph, results, data, pie chart
 Requires at least: 6.0
 Tested up to: 6.8
@@ -84,6 +83,12 @@ Initial Release
 
 == Changelog ==
 
+
+= 1.2.8 =
+* fixed translation/text domain usage in files
+
+= 1.2.7 =
+* fixed minor security issues
 
 = 1.2.6 =
 * fixed max parameter doesn't worked with horizontal bar chart

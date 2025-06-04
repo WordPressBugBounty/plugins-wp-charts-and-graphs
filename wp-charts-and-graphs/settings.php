@@ -24,10 +24,10 @@ if ( ! class_exists( 'pantherius_wp_charts_settings' ) ) {
 			else $value = get_option($field);
 			// echo a proper input type="textarea"
 			if ( ! empty( $other ) ) {
-				echo sprintf( '<textarea name="%s" id="%s" %s />%s</textarea>', $field, $field, $other, $value );
+				echo sprintf( '<textarea name="%s" id="%s" %s />%s</textarea>', esc_attr($field), esc_attr($field), esc_attr($field), esc_textarea($value) );
 			}
 			else {
-				echo sprintf( '<textarea name="%s" id="%s" />%s</textarea>', $field, $field, $value );
+				echo sprintf( '<textarea name="%s" id="%s" />%s</textarea>', esc_attr($field), esc_attr($field), esc_textarea($value) );
 			}
 		}
 
@@ -48,14 +48,14 @@ if ( ! class_exists( 'pantherius_wp_charts_settings' ) ) {
 
 		public function pantherius_wp_charts_settings_page() {
 			if ( ! current_user_can( 'manage_options' ) ) {
-				wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', PWPC_CHARTS_TEXT_DOMAIN ) );
+				wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'pwpcharts' ) );
 			}
 			// Render the settings template
 			// add your settings section
 			add_settings_section('pantherius_wp_charts-section', '', array( $this, 'settings_section_pantherius_wp_charts' ), 'pantherius_wp_charts' );
 			// add your setting's fields
-			add_settings_field( 'pantherius_wp_charts-setting_include_files', esc_html__( 'Include Plugin Files to Specified Pages Only (comma separated list of page IDs - except home page)', PWPC_CHARTS_TEXT_DOMAIN ), array($this, 'settings_field_input_textarea'), 'pantherius_wp_charts', 'pantherius_wp_charts-section', array( 'field' => 'setting_include_files', 'field_value' => '', 'other' => 'rows="3" cols="70"' ) );
-			add_settings_field('pantherius_wp_charts-setting_exclude_files', esc_html__( 'Exclude Plugin Files from Specified Pages (comma separated list of page IDs - except home page)', PWPC_CHARTS_TEXT_DOMAIN ), array( $this, 'settings_field_input_textarea'), 'pantherius_wp_charts', 'pantherius_wp_charts-section', array( 'field' => 'setting_exclude_files', 'field_value' => '', 'other' => 'rows="3" cols="70"' ) );
+			add_settings_field( 'pantherius_wp_charts-setting_include_files', esc_html__( 'Include Plugin Files to Specified Pages Only (comma separated list of page IDs - except home page)', 'pwpcharts' ), array($this, 'settings_field_input_textarea'), 'pantherius_wp_charts', 'pantherius_wp_charts-section', array( 'field' => 'setting_include_files', 'field_value' => '', 'other' => 'rows="3" cols="70"' ) );
+			add_settings_field('pantherius_wp_charts-setting_exclude_files', esc_html__( 'Exclude Plugin Files from Specified Pages (comma separated list of page IDs - except home page)', 'pwpcharts' ), array( $this, 'settings_field_input_textarea'), 'pantherius_wp_charts', 'pantherius_wp_charts-section', array( 'field' => 'setting_exclude_files', 'field_value' => '', 'other' => 'rows="3" cols="70"' ) );
 
 			include(sprintf("%s/templates/options.php", dirname(__FILE__)));			
 		}
@@ -82,8 +82,8 @@ if ( ! class_exists( 'pantherius_wp_charts_settings' ) ) {
 		public function add_menu() {
 			// Add a page to manage this plugin's settings
 			add_menu_page( 'Charts and Graphs', 'Charts and Graphs', 'manage_options', 'pantherius_wp_charts', array( &$this, 'plugin_settings_page' ), 'dashicons-chart-bar', '65.014' );
-			add_submenu_page( 'pantherius_wp_charts', 'Charts and Graphs', esc_html__( 'Generate Chart', PWPC_CHARTS_TEXT_DOMAIN ), 'manage_options', 'pantherius_wp_charts', array( $this, 'plugin_settings_page' ) );
-			add_submenu_page( 'pantherius_wp_charts', 'Charts and Graphs', esc_html__( 'Settings', PWPC_CHARTS_TEXT_DOMAIN ), 'manage_options', 'pantherius_wp_charts_settings', array( $this, 'pantherius_wp_charts_settings_page' ) );
+			add_submenu_page( 'pantherius_wp_charts', 'Charts and Graphs', esc_html__( 'Generate Chart', 'pwpcharts' ), 'manage_options', 'pantherius_wp_charts', array( $this, 'plugin_settings_page' ) );
+			add_submenu_page( 'pantherius_wp_charts', 'Charts and Graphs', esc_html__( 'Settings', 'pwpcharts' ), 'manage_options', 'pantherius_wp_charts_settings', array( $this, 'pantherius_wp_charts_settings_page' ) );
 		}
 		
 		/**
@@ -91,7 +91,7 @@ if ( ! class_exists( 'pantherius_wp_charts_settings' ) ) {
 		**/		
 		public function plugin_settings_page() {
 			if ( ! current_user_can( 'manage_options' ) ) {
-				wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', PWPC_CHARTS_TEXT_DOMAIN ) );
+				wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'pwpcharts' ) );
 			}
 			// Render the settings template
 			include( sprintf( "%s/templates/settings.php", dirname( __FILE__ ) ) );

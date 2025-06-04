@@ -2,15 +2,19 @@
 defined( 'ABSPATH' ) OR exit;
 /**
  * Plugin Name: WP Charts and Graphs
- * Plugin URI: http://modalsurvey.com
+ * Plugin URI: http://swiftwoosearch.com
  * Description: Add custom charts to your website
- * Author: Pantherius
- * Version: 1.2.6
+ * Author: Swift Woo Search
+ * Version: 1.2.8
+ * License: GPLv2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: pwpcharts
+ * Domain Path: /languages
+ * 
  * Author URI: http://pantherius.com
  */
 
-define( 'PWPC_CHARTS_TEXT_DOMAIN' , 'pwpcharts' );
-define( 'PWPC_CHARTS_VERSION' , '1.2.5' );
+define( 'PWPC_CHARTS_VERSION' , '1.2.8' );
  
 if ( ! class_exists( 'pantherius_wp_charts' ) ) {
 	class pantherius_wp_charts {
@@ -75,10 +79,10 @@ if ( ! class_exists( 'pantherius_wp_charts' ) ) {
 						'id' => ''
 					), $atts );
 			if ( empty( $params[ 'titles' ] ) ) {
-				return __( "The titles parameter couldn't be empty! Please specify a comma separated list.", PWPC_CHARTS_TEXT_DOMAIN );
+				return __( "The titles parameter couldn't be empty! Please specify a comma separated list.", 'pwpcharts' );
 			}
 			if ( empty( $params[ 'values' ] ) ) {
-				return __( "The values parameter couldn't be empty! Please specify a comma separated list.", PWPC_CHARTS_TEXT_DOMAIN );
+				return __( "The values parameter couldn't be empty! Please specify a comma separated list.", 'pwpcharts' );
 			}
 			$params[ 'id' ] = uniqid();
 			$params[ 'titles_array' ] =  explode( ",", $params[ 'titles' ] );
@@ -166,7 +170,7 @@ if ( ! class_exists( 'pantherius_wp_charts' ) ) {
 		**/
 		function add_action_links( $links ) { 
 			$action_link = array(
-				'<a href="' . admin_url( 'options-general.php?page=pantherius_wp_charts' ) . '">' . __( "Settings", PWPC_CHARTS_TEXT_DOMAIN ) . '</a>',
+				'<a href="' . admin_url( 'options-general.php?page=pantherius_wp_charts' ) . '">' . __( "Settings", 'pwpcharts' ) . '</a>',
 			);
 			return array_merge( $links, $action_link );
 		}
