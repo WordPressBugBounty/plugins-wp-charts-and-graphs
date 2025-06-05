@@ -5,10 +5,10 @@ defined( 'ABSPATH' ) OR exit;
  * Plugin URI: http://swiftwoosearch.com
  * Description: Add custom charts to your website
  * Author: Swift Woo Search
- * Version: 1.2.8
+ * Version: 1.2.9
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: pwpcharts
+ * Text Domain: wp-charts-and-graphs
  * Domain Path: /languages
  * 
  * Author URI: http://pantherius.com
@@ -62,7 +62,7 @@ if ( ! class_exists( 'pantherius_wp_charts' ) ) {
 		**/
 		public function pwpc_localization() {
 			// Localization
-			load_plugin_textdomain( 'pwpcharts', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+			load_plugin_textdomain( 'wp-charts-and-graphs', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 		}
 
 		function pantherius_wpcharts_shortcode( $atts ) {
@@ -79,10 +79,10 @@ if ( ! class_exists( 'pantherius_wp_charts' ) ) {
 						'id' => ''
 					), $atts );
 			if ( empty( $params[ 'titles' ] ) ) {
-				return __( "The titles parameter couldn't be empty! Please specify a comma separated list.", 'pwpcharts' );
+				return __( "The titles parameter couldn't be empty! Please specify a comma separated list.", 'wp-charts-and-graphs' );
 			}
 			if ( empty( $params[ 'values' ] ) ) {
-				return __( "The values parameter couldn't be empty! Please specify a comma separated list.", 'pwpcharts' );
+				return __( "The values parameter couldn't be empty! Please specify a comma separated list.", 'wp-charts-and-graphs' );
 			}
 			$params[ 'id' ] = uniqid();
 			$params[ 'titles_array' ] =  explode( ",", $params[ 'titles' ] );
@@ -170,7 +170,7 @@ if ( ! class_exists( 'pantherius_wp_charts' ) ) {
 		**/
 		function add_action_links( $links ) { 
 			$action_link = array(
-				'<a href="' . admin_url( 'options-general.php?page=pantherius_wp_charts' ) . '">' . __( "Settings", 'pwpcharts' ) . '</a>',
+				'<a href="' . admin_url( 'options-general.php?page=pantherius_wp_charts' ) . '">' . __( "Settings", 'wp-charts-and-graphs' ) . '</a>',
 			);
 			return array_merge( $links, $action_link );
 		}

@@ -84,6 +84,9 @@ Initial Release
 == Changelog ==
 
 
+= 1.2.9 =
+* improved translations, minor optimizations
+
 = 1.2.8 =
 * fixed translation/text domain usage in files
 
