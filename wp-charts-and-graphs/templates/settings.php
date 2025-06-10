@@ -2,7 +2,7 @@
 	<h3>WP Charts and Graphs<br><small><i>by Pantherius</i></small></h3>
 	<img src="<?php echo esc_url( plugins_url( '../assets/img/screen_preloader.gif', __FILE__ ) ); ?>">
 
-	<h5><?php esc_html_e( 'LOADING', 'wp-charts-and-graphs' );?><br><br><?php esc_html_e( 'Please wait...', 'pantherius-wordpress-survey-polls' );?></h5>
+	<h5><?php esc_html_e( 'LOADING', 'wp-charts-and-graphs' );?><br><br><?php esc_html_e( 'Please wait...', 'wp-charts-and-graphs' );?></h5>
 </div>
 <div class="wrap pwpc" style="visibility:hidden">
 	

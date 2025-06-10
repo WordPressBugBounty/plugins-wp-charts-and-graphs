@@ -84,6 +84,9 @@ Initial Release
 == Changelog ==
 
 
+= 1.3 =
+* fixed text domain issues
+
 = 1.2.9 =
 * improved translations, minor optimizations
 

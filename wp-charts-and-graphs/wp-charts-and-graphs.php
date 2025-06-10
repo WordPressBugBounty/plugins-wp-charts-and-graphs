@@ -5,7 +5,7 @@ defined( 'ABSPATH' ) OR exit;
  * Plugin URI: http://swiftwoosearch.com
  * Description: Add custom charts to your website
  * Author: Swift Woo Search
- * Version: 1.2.9
+ * Version: 1.3
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: wp-charts-and-graphs
@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) OR exit;
  * Author URI: http://pantherius.com
  */
 
-define( 'PWPC_CHARTS_VERSION' , '1.2.8' );
+define( 'PWPC_CHARTS_VERSION' , '1.3' );
  
 if ( ! class_exists( 'pantherius_wp_charts' ) ) {
 	class pantherius_wp_charts {
