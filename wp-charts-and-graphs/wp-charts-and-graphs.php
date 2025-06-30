@@ -5,7 +5,7 @@ defined( 'ABSPATH' ) OR exit;
  * Plugin URI: http://swiftwoosearch.com
  * Description: Add custom charts to your website
  * Author: Swift Woo Search
- * Version: 1.3
+ * Version: 1.3.1
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: wp-charts-and-graphs
@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) OR exit;
  * Author URI: http://pantherius.com
  */
 
-define( 'PWPC_CHARTS_VERSION' , '1.3' );
+define( 'PWPC_CHARTS_VERSION' , '1.3.1' );
  
 if ( ! class_exists( 'pantherius_wp_charts' ) ) {
 	class pantherius_wp_charts {
@@ -133,7 +133,7 @@ if ( ! class_exists( 'pantherius_wp_charts' ) ) {
 					return;
 				}
 			}
-			wp_enqueue_style( 'pantherius_wp_charts_style', plugins_url( '/assets/css/pantherius_wp_charts.css', __FILE__ ) );
+			wp_enqueue_style( 'pantherius_wp_charts_style', plugins_url( '/assets/css/pantherius_wp_charts.css', __FILE__, PWPC_CHARTS_VERSION ) );
 			wp_enqueue_script( 'jquery' );
 			wp_enqueue_script( 'jquery-chartjs', plugins_url( '/assets/js/Chart.min.js', __FILE__ ), array( 'jquery' ), '2.3.0' );
 			wp_enqueue_script( 'pantherius_wp_charts_script', plugins_url( '/assets/js/pantherius_wp_charts.js', __FILE__ ), array( 'jquery', 'jquery-chartjs' ), PWPC_CHARTS_VERSION );

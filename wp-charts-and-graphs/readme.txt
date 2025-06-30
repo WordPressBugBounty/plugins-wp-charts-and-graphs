@@ -84,6 +84,9 @@ Initial Release
 == Changelog ==
 
 
+= 1.3.1 =
+* minor hotfix for text domain
+
 = 1.3 =
 * fixed text domain issues
 
